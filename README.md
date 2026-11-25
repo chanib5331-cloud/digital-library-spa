@@ -5,7 +5,9 @@ Members register, browse and filter the catalog, borrow and return books, and re
 
 The whole **client–server architecture is simulated in the browser**: the client sends asynchronous requests through a custom `FXMLHttpRequest` class, a network layer routes them to one of two servers, and each server works with its own data layer over `localStorage`.
 
-## Screenshots
+**Live demo:** https://chanib5331-cloud.github.io/digital-library-spa/HTML/index.html (demo user: `michal@example.com` / `1234`)
+
+
 
 **Home**
 ![Home page](screenshots/home.png)
