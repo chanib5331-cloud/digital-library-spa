@@ -1,0 +1,518 @@
+/* עיצוב מודרני לעמוד הבית */
+
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero-section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  z-index: 10;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.library-image {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  margin-left: 30px;
+}
+
+.main-library-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+  border: 3px solid rgba(255,255,255,0.8);
+  transition: transform 0.3s ease;
+}
+
+.main-library-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 35px rgba(52, 152, 219, 0.4);
+}
+
+.hero-content {
+  flex: 1;
+  text-align: right;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255,105,180,0.3), rgba(138,43,226,0.3));
+  border-radius: 30px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 30px 0;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.title-icon {
+  font-size: 3rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.title-text {
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  margin-bottom: 40px;
+  animation: slideIn 1s ease-out 0.5s both;
+}
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.magic-btn {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.magic-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.magic-btn:hover::before {
+  transform: scaleX(1);
+}
+
+.login-btn::before {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.register-btn::before {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.info-btn::before {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.btn-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border: 3px solid rgba(255,255,255,0.8);
+  margin-bottom: 10px;
+}
+
+.login-btn .btn-icon {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3);
+}
+
+.register-btn .btn-icon {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  box-shadow: 0 8px 25px rgba(46, 204, 113, 0.3);
+}
+
+.info-btn .btn-icon {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
+}
+
+.btn-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.magic-btn:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+.magic-btn p {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.btn-sparkle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.magic-btn:hover .btn-sparkle {
+  transform: translateX(100%);
+}
+
+/* ספרים מרחפים */
+.floating-books {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-book {
+  position: absolute;
+  font-size: 2rem;
+  animation: floatAround 10s linear infinite;
+  opacity: 0.7;
+}
+
+.floating-book:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+  animation-duration: 12s;
+}
+
+.floating-book:nth-child(2) {
+  top: 20%;
+  right: 15%;
+  animation-delay: 2s;
+  animation-duration: 15s;
+}
+
+.floating-book:nth-child(3) {
+  bottom: 30%;
+  left: 20%;
+  animation-delay: 4s;
+  animation-duration: 18s;
+}
+
+.floating-book:nth-child(4) {
+  bottom: 20%;
+  right: 10%;
+  animation-delay: 6s;
+  animation-duration: 14s;
+}
+
+.floating-book:nth-child(5) {
+  top: 50%;
+  left: 5%;
+  animation-delay: 8s;
+  animation-duration: 16s;
+}
+
+@keyframes floatAround {
+  0% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-20px) rotate(90deg); }
+  50% { transform: translateY(0px) rotate(180deg); }
+  75% { transform: translateY(-15px) rotate(270deg); }
+  100% { transform: translateY(0px) rotate(360deg); }
+}
+
+/* עיצוב כפתורים מטורף */
+.btn {
+  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+  background-size: 200% 200%;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: rainbow 4s ease infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  animation: glow 1s ease-in-out infinite;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24, #ff9ff3);
+  background-size: 200% 200%;
+  animation: rainbow 5s ease infinite reverse;
+}
+
+/* עיצוב קונטיינרים */
+.container {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  padding: 40px;
+  margin: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  border: 2px solid rgba(255,255,255,0.2);
+  animation: slideIn 0.8s ease-out;
+}
+
+/* עיצוב טפסים */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 25px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 20px rgba(255,107,107,0.5);
+  transform: scale(1.02);
+}
+
+/* עיצוב כרטיסי ספרים */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.book-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 25px;
+  border: 2px solid rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+  animation: slideIn 0.6s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  animation: glow 2s ease-in-out infinite;
+}
+
+.book-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255,107,107,0.1), rgba(78,205,196,0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.book-card:hover::before {
+  opacity: 1;
+}
+
+.recommended-book {
+  border: 3px solid #ffd700;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.recommend-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #333;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* עיצוב כפתורי ספרים */
+.book-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 5px;
+}
+
+.btn-borrow {
+  background: linear-gradient(135deg, #00f260, #0575e6);
+  color: white;
+}
+
+.btn-return {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+}
+
+.btn-disabled {
+  background: linear-gradient(135deg, #636e72, #2d3436);
+  color: white;
+  cursor: not-allowed;
+}
+
+.book-btn:hover:not(.btn-disabled) {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* עיצוב ניווט */
+.nav-bar {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+.nav-bar h2 {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin: 0;
+}
+
+/* עיצוב סינונים */
+.filters {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+.filters-row {
+  display: flex;
+  gap: 20px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+/* כותרות מטורפות */
+h1, h2, h3 {
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+  animation: slideIn 0.8s ease-out;
+}
+
+/* טקסט לבן עם צל */
+p, li, small {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* הודעת ברוכים הבאים מטורפת */
+#welcomeMessage {
+  background: linear-gradient(135deg, #00f260, #0575e6, #00d4ff) !important;
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+  animation: glow 3s ease-in-out infinite alternate, float 4s ease-in-out infinite !important;
+  border: 3px solid rgba(255,255,255,0.3) !important;
+}
+
+/* מצב ריק מעוצב */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+.empty-state h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  animation: pulse 2s ease-in-out infinite;
+}

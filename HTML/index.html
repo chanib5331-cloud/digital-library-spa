@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ספרייה דיגיטלית</title>
+    <link rel="stylesheet" href="../CSS/modern-design.css" />
+    <link rel="stylesheet" href="../CSS/loading.css" />
+  </head>
+  <body>
+    <!-- קונטיינר הודעות -->
+    <div id="messageContainer"></div>
+
+    <!-- ספינר טעינה -->
+    <div id="loadingSpinner">
+      <div>
+        <div></div>
+        <p id="loadingText">טוען...</p>
+      </div>
+    </div>
+
+
+
+    <!-- קונטיינר ראשי לטמפלטים -->
+    <div id="appContainer"></div>
+
+    <!-- טמפלט עמוד בית -->
+    <template id="homeTemplate">
+      <div class="home-container">
+        <div class="hero-section">
+          <div class="library-image">
+            <img src="../IMAGE/library.svg" alt="ספרייה" class="main-library-img">
+            <div class="image-overlay"></div>
+          </div>
+          <div class="hero-content">
+            <h1 class="hero-title">
+              <span class="title-icon">🏛</span>
+              <span class="title-text">ספרייה דיגיטלית</span>
+              <span class="title-icon">📚</span>
+            </h1>
+            <p class="hero-subtitle">
+              ברוכים הבאים לעולם הקסום של הספרים! ✨
+            </p>
+        </div>
+        <div class="buttons-container">
+          <button class="magic-btn login-btn" onclick="showTemplate('login')">
+            <div class="btn-icon">👤</div>
+            <div class="btn-text">התחברות</div>
+            <p>התחבר לחשבון הקיים שלך</p>
+          </button>
+          <button class="magic-btn register-btn" onclick="showTemplate('register')">
+            <div class="btn-icon">📚</div>
+            <div class="btn-text">הרשמה</div>
+            <p>צור חשבון חדש בספרייה</p>
+          </button>
+          <button class="magic-btn info-btn" onclick="showTemplate('info')">
+            <div class="btn-icon">📋</div>
+            <div class="btn-text">מידע ושירותים</div>
+            <p>למד על השירותים שלנו</p>
+          </button>
+        </div>
+          </div>
+        </div>
+        <div class="floating-books">
+          <div class="floating-book">📖</div>
+          <div class="floating-book">📗</div>
+          <div class="floating-book">📘</div>
+          <div class="floating-book">📙</div>
+          <div class="floating-book">📚</div>
+        </div>
+      </div>
+    </template>
+
+    <!-- טמפלט התחברות -->
+    <template id="loginTemplate">
+      <div class="container">
+        <h2>🔑 התחברות</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail">כתובת מייל:</label>
+            <input type="email" id="loginEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">סיסמה:</label>
+            <input type="password" id="loginPassword" required />
+          </div>
+          <div class="form-buttons">
+            <button type="submit" class="btn">התחבר</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="showTemplate('home')"
+            >
+              חזור
+            </button>
+          </div>
+        </form>
+      </div>
+    </template>
+
+    <!-- טמפלט הרשמה -->
+    <template id="registerTemplate">
+      <div class="container">
+        <h2>📝 הרשמה</h2>
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="registerName">שם מלא:</label>
+            <input type="text" id="registerName" required />
+          </div>
+          <div class="form-group">
+            <label for="registerEmail">כתובת מייל:</label>
+            <input type="email" id="registerEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="registerPassword">סיסמה:</label>
+            <input type="password" id="registerPassword" required />
+          </div>
+          <div class="form-group">
+            <label for="registerChildren">מספר ילדים:</label>
+            <input
+              type="number"
+              id="registerChildren"
+              min="0"
+              value="0"
+              required
+            />
+          </div>
+          <div class="form-buttons">
+            <button type="submit" class="btn">הירשם</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="showTemplate('home')"
+            >
+              חזור
+            </button>
+          </div>
+        </form>
+      </div>
+    </template>
+
+    <!-- טמפלט מידע ושירותים -->
+    <template id="infoTemplate">
+      <div class="container">
+        <h2>ℹ️ מידע ושירותים</h2>
+        <div class="info-content">
+          <h3>🏛️ אודות הספרייה</h3>
+          <p>
+            הספרייה הדיגיטלית שלנו מציעה מגוון רחב של ספרים לכל הגילאים והטעמים.
+          </p>
+
+          <h3>📋 שירותים זמינים:</h3>
+          <ul style="margin: 15px 0">
+            <li>השאלת ספרים דיגיטליים</li>
+            <li>חיפוש וסינון ספרים</li>
+            <li>המלצות אישיות</li>
+            <li>ניהול ספרים מושאלים</li>
+          </ul>
+
+          <h3>📞 פרטי קשר:</h3>
+          <p>טלפון: 03-1234567</p>
+          <p>מייל: info@library.co.il</p>
+
+          <h3>🕒 שעות פעילות:</h3>
+          <p>ראשון-חמישי: 8:00-18:00</p>
+          <p>שישי: 8:00-14:00</p>
+        </div>
+        <div class="info-buttons">
+          <button class="btn" onclick="showTemplate('home')">
+            חזור לעמוד הבית
+          </button>
+        </div>
+      </div>
+    </template>
+
+    <!-- טמפלט קטלוג ספרים -->
+    <template id="catalogTemplate">
+      <div class="container">
+        <div id="welcomeMessage">
+          🎉 ברוך הבא לספרייה הדיגיטלית! אנחנו שמחים שאתה כאן 📚
+        </div>
+        <div class="nav-bar">
+          <h2>📚 קטלוג ספרים</h2>
+          <div>
+            <button class="btn" id="myBooksBtn">📖 הספרים שלי</button>
+            <button class="btn" id="recommendBtn">⭐ המלץ על ספר</button>
+            <button class="btn" id="editProfileBtn">👤 עדכון פרטים</button>
+            <button class="btn btn-secondary" id="logoutBtn">🚪 התנתק</button>
+          </div>
+        </div>
+
+        <div class="filters">
+          <div class="filters-row">
+            <div class="form-group">
+              <label for="searchInput">חיפוש:</label>
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="חפש לפי שם ספר או מחבר..."
+              />
+            </div>
+            <div class="form-group">
+              <label for="genreFilter">ז'אנר:</label>
+              <select id="genreFilter">
+                <option value="">כל הז'אנרים</option>
+                <option value="מתח">מתח</option>
+                <option value="רגש">רגש</option>
+                <option value="דרמה משפחתית">דרמה משפחתית</option>
+                <option value="כללי">כללי</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="ageFilter">קבוצת גיל:</label>
+              <select id="ageFilter">
+                <option value="">כל הגילאים</option>
+                <option value="גיל הרך">גיל הרך</option>
+                <option value="נוער">נוער</option>
+                <option value="מבוגרים">מבוגרים</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <button class="btn" id="filterBtn">
+                🔍 סנן ספרים
+              </button>
+              <button class="btn btn-secondary" id="clearFilters">
+                נקה סינון
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="booksGrid" class="books-grid"></div>
+      </div>
+    </template>
+
+    <!-- טמפלט הספרים שלי -->
+    <template id="myBooksTemplate">
+      <div class="container">
+        <div class="nav-bar">
+          <h2>📖 הספרים שלי</h2>
+          <div>
+            <button class="btn" onclick="showTemplate('catalog')">
+              📚 חזור לקטלוג
+            </button>
+            <button class="btn" onclick="showTemplate('editProfile')">
+              👤 עדכון פרטים
+            </button>
+            <button class="btn btn-secondary" onclick="handleLogout()">
+              🚪 התנתק
+            </button>
+          </div>
+        </div>
+
+        <div id="myBooksGrid" class="books-grid"></div>
+      </div>
+    </template>
+
+    <!-- טמפלט המלצת ספר -->
+    <template id="recommendTemplate">
+      <div class="container">
+        <h2>⭐ המלץ על ספר</h2>
+        <form id="recommendForm">
+          <div class="form-group">
+            <label for="recommendTitle">שם הספר:</label>
+            <input type="text" id="recommendTitle" required />
+          </div>
+          <div class="form-group">
+            <label for="recommendAuthor">שם המחבר:</label>
+            <input type="text" id="recommendAuthor" required />
+          </div>
+          <div class="form-group">
+            <label for="recommendGenre">ז'אנר:</label>
+            <select id="recommendGenre">
+              <option value="כללי">כללי</option>
+              <option value="מתח">מתח</option>
+              <option value="רגש">רגש</option>
+              <option value="דרמה משפחתית">דרמה משפחתית</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="recommendAgeGroup">קבוצת גיל:</label>
+            <select id="recommendAgeGroup">
+              <option value="מבוגרים">מבוגרים</option>
+              <option value="נוער">נוער</option>
+              <option value="גיל הרך">גיל הרך</option>
+            </select>
+          </div>
+          <div class="form-buttons">
+            <button type="submit" class="btn">שלח המלצה</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="showTemplate('catalog')"
+            >
+              חזור
+            </button>
+          </div>
+        </form>
+      </div>
+    </template>
+
+    <!-- טמפלט עדכון פרטים -->
+    <template id="editProfileTemplate">
+      <div class="container">
+        <h2>👤 עדכון פרטים אישיים</h2>
+        <form id="editProfileForm">
+          <div class="form-group">
+            <label for="editName">שם מלא:</label>
+            <input type="text" id="editName" required />
+          </div>
+          <div class="form-group">
+            <label for="editEmail">כתובת מייל:</label>
+            <input
+              type="email"
+              id="editEmail"
+              readonly
+              style="background-color: #f8f9fa; cursor: not-allowed"
+            />
+            <small style="color: #6c757d">כתובת המייל לא ניתנת לשינוי</small>
+          </div>
+          <div class="form-group">
+            <label for="editChildren">מספר ילדים:</label>
+            <input type="number" id="editChildren" min="0" required />
+          </div>
+          <hr style="margin: 20px 0" />
+          <h3 style="color: #495057; font-size: 1.2rem">
+            שינוי סיסמה (אופציונלי)
+          </h3>
+          <div class="form-group">
+            <label for="currentPassword">סיסמה נוכחית:</label>
+            <input
+              type="password"
+              id="currentPassword"
+              placeholder="הכנס סיסמה נוכחית לשינוי"
+            />
+          </div>
+          <div class="form-group">
+            <label for="newPassword">סיסמה חדשה:</label>
+            <input
+              type="password"
+              id="newPassword"
+              placeholder="הכנס סיסמה חדשה"
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">אימות סיסמה חדשה:</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="חזור על הסיסמה החדשה"
+            />
+          </div>
+          <div class="form-buttons">
+            <button type="submit" class="btn">עדכן פרטים</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="showTemplate('catalog')"
+            >
+              חזור
+            </button>
+          </div>
+        </form>
+      </div>
+    </template>
+
+    <!-- סקריפטים -->
+    <script src="../JS/seedData.js"></script>
+    <script src="../JS/FXMLHttpRequest.js"></script>
+    <script src="../JS/network.js"></script>
+    <script src="../JS/libraryDb.js"></script>
+    <script src="../JS/usersDb.js"></script>
+    <script src="../JS/libraryServer.js"></script>
+    <script src="../JS/userServer.js"></script>
+    <script src="../JS/client.js"></script>
+    <script src="../JS/app.js"></script>
+    <script src="../JS/app-ui.js"></script>
+    <script src="../JS/app-main.js"></script>
+  </body>
+</html>

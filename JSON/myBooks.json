@@ -1,0 +1,10 @@
+[
+  {
+    "mail": "michal@example.com",
+    "borrowedBookIds": ["b2", "b6", "b9"]
+  },
+  {
+    "mail": "chani@example.com",
+    "borrowedBookIds": ["b12", "b15"]
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "b1",
+    "title": "הסוד שבמעמקים",
+    "author": "יונה ספיר",
+    "genre": "מתח",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b2",
+    "title": "לגדול בצל הסוד",
+    "author": "ליבי קליין",
+    "genre": "דרמה משפחתית",
+    "age_group": "נוער",
+    "isBorrowed": true
+  },
+  {
+    "id": "b3",
+    "title": "כמו אור בחושך",
+    "author": "שרי וייס",
+    "genre": "רגש",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b4",
+    "title": "הצד האחר של המטבע",
+    "author": "חיה פרידמן",
+    "genre": "מתח",
+    "age_group": "נוער",
+    "isBorrowed": false
+  },
+  {
+    "id": "b5",
+    "title": "החבר החדש של מיקי",
+    "author": "מנוחה פוקס",
+    "genre": "דרמה משפחתית",
+    "age_group": "גיל הרך",
+    "isBorrowed": false
+  },
+  {
+    "id": "b6",
+    "title": "המסע אל האמת",
+    "author": "פנינה יונג",
+    "genre": "רגש",
+    "age_group": "מבוגרים",
+    "isBorrowed": true
+  },
+  {
+    "id": "b7",
+    "title": "קצה החוט",
+    "author": "יונה ספיר",
+    "genre": "מתח",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b8",
+    "title": "כשנהפכו היוצרות",
+    "author": "ליבי קליין",
+    "genre": "דרמה משפחתית",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b9",
+    "title": "החוליה החסרה",
+    "author": "שרי וייס",
+    "genre": "מתח",
+    "age_group": "נוער",
+    "isBorrowed": true
+  },
+  {
+    "id": "b10",
+    "title": "אהבה אסורה",
+    "author": "חיה פרידמן",
+    "genre": "רגש",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b11",
+    "title": "סיפורי סבתא למחשבה",
+    "author": "מנוחה פוקס",
+    "genre": "רגש",
+    "age_group": "גיל הרך",
+    "isBorrowed": false
+  },
+  {
+    "id": "b12",
+    "title": "השערים נפתחים",
+    "author": "פנינה יונג",
+    "genre": "מתח",
+    "age_group": "מבוגרים",
+    "isBorrowed": true
+  },
+  {
+    "id": "b13",
+    "title": "בין שני עולמות",
+    "author": "יונה ספיר",
+    "genre": "דרמה משפחתית",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b14",
+    "title": "הכוח שבפנים",
+    "author": "ליבי קליין",
+    "genre": "רגש",
+    "age_group": "נוער",
+    "isBorrowed": false
+  },
+  {
+    "id": "b15",
+    "title": "הסודות של משפחת גורן",
+    "author": "שרי וייס",
+    "genre": "דרמה משפחתית",
+    "age_group": "מבוגרים",
+    "isBorrowed": true
+  },
+  {
+    "id": "b16",
+    "title": "תעתועי הנפש",
+    "author": "חיה פרידמן",
+    "genre": "רגש",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b17",
+    "title": "מעשה בחמישה בלונים",
+    "author": "מנוחה פוקס",
+    "genre": "רגש",
+    "age_group": "גיל הרך",
+    "isBorrowed": false
+  },
+  {
+    "id": "b18",
+    "title": "הבטחה שבלב",
+    "author": "פנינה יונג",
+    "genre": "דרמה משפחתית",
+    "age_group": "נוער",
+    "isBorrowed": false
+  },
+  {
+    "id": "b19",
+    "title": "מרתף סודי",
+    "author": "יונה ספיר",
+    "genre": "מתח",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b20",
+    "title": "מעגל החיים",
+    "author": "ליבי קליין",
+    "genre": "רגש",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b21",
+    "title": "הצוואה הנעלמת",
+    "author": "שרי וייס",
+    "genre": "מתח",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b22",
+    "title": "הכל בגללה",
+    "author": "חיה פרידמן",
+    "genre": "דרמה משפחתית",
+    "age_group": "נוער",
+    "isBorrowed": false
+  },
+  {
+    "id": "b23",
+    "title": "הצבעים ששינו את העולם",
+    "author": "מנוחה פוקס",
+    "genre": "דרמה משפחתית",
+    "age_group": "גיל הרך",
+    "isBorrowed": false
+  },
+  {
+    "id": "b24",
+    "title": "בדרך אל האור",
+    "author": "פנינה יונג",
+    "genre": "רגש",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b25",
+    "title": "קשר שתיקה",
+    "author": "יונה ספיר",
+    "genre": "מתח",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b26",
+    "title": "הכול לטובה",
+    "author": "ליבי קליין",
+    "genre": "רגש",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b27",
+    "title": "שובו של השקט",
+    "author": "שרי וייס",
+    "genre": "מתח",
+    "age_group": "נוער",
+    "isBorrowed": false
+  },
+  {
+    "id": "b28",
+    "title": "הלב הפועם",
+    "author": "חיה פרידמן",
+    "genre": "רגש",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b29",
+    "title": "המעטפה הסגולה",
+    "author": "פנינה יונג",
+    "genre": "מתח",
+    "age_group": "נוער",
+    "isBorrowed": false
+  },
+  {
+    "id": "b30",
+    "title": "אחים לנצח",
+    "author": "ליבי קליין",
+    "genre": "דרמה משפחתית",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b31",
+    "title": "סוד הגן הקסום",
+    "author": "מנוחה פוקס",
+    "genre": "רגש",
+    "age_group": "גיל הרך",
+    "isBorrowed": false
+  },
+  {
+    "id": "b32",
+    "title": "במרוץ הזמן",
+    "author": "יונה ספיר",
+    "genre": "מתח",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b33",
+    "title": "על הנייר ובמציאות",
+    "author": "שרי וייס",
+    "genre": "דרמה משפחתית",
+    "age_group": "נוער",
+    "isBorrowed": false
+  },
+  {
+    "id": "b34",
+    "title": "תפילה חרישית",
+    "author": "חיה פרידמן",
+    "genre": "רגש",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b35",
+    "title": "החץ בתוך הלב",
+    "author": "פנינה יונג",
+    "genre": "רגש",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b36",
+    "title": "החומה שבינינו",
+    "author": "ליבי קליין",
+    "genre": "דרמה משפחתית",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b37",
+    "title": "המסתורין שבדממה",
+    "author": "יונה ספיר",
+    "genre": "מתח",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b38",
+    "title": "אמא שלי גיבורה",
+    "author": "מנוחה פוקס",
+    "genre": "רגש",
+    "age_group": "גיל הרך",
+    "isBorrowed": false
+  },
+  {
+    "id": "b39",
+    "title": "מעבר לקשת בענן",
+    "author": "שרי וייס",
+    "genre": "רגש",
+    "age_group": "נוער",
+    "isBorrowed": false
+  },
+  {
+    "id": "b40",
+    "title": "הכל לטובה",
+    "author": "חיה פרידמן",
+    "genre": "דרמה משפחתית",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b41",
+    "title": "פעמוני הגאולה",
+    "author": "פנינה יונג",
+    "genre": "מתח",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b42",
+    "title": "הדרך לשם",
+    "author": "ליבי קליין",
+    "genre": "מתח",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b43",
+    "title": "פרח בר במדבר",
+    "author": "יונה ספיר",
+    "genre": "רגש",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b44",
+    "title": "הכוכב הנופל",
+    "author": "מנוחה פוקס",
+    "genre": "דרמה משפחתית",
+    "age_group": "גיל הרך",
+    "isBorrowed": false
+  },
+  {
+    "id": "b45",
+    "title": "השביל הנסתר",
+    "author": "שרי וייס",
+    "genre": "מתח",
+    "age_group": "נוער",
+    "isBorrowed": false
+  },
+  {
+    "id": "b46",
+    "title": "הסוד המשפחתי",
+    "author": "חיה פרידמן",
+    "genre": "דרמה משפחתית",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b47",
+    "title": "מעגל הסודות",
+    "author": "פנינה יונג",
+    "genre": "רגש",
+    "age_group": "נוער",
+    "isBorrowed": false
+  },
+  {
+    "id": "b48",
+    "title": "הבית ברחוב האור",
+    "author": "ליבי קליין",
+    "genre": "רגש",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b49",
+    "title": "מבחן האמת",
+    "author": "יונה ספיר",
+    "genre": "מתח",
+    "age_group": "מבוגרים",
+    "isBorrowed": false
+  },
+  {
+    "id": "b50",
+    "title": "ילד של אור",
+    "author": "מנוחה פוקס",
+    "genre": "רגש",
+    "age_group": "גיל הרך",
+    "isBorrowed": false
+  }
+]
