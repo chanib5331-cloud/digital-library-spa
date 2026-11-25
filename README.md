@@ -7,7 +7,7 @@ The whole **client–server architecture is simulated in the browser**: the clie
 
 **Live demo:** https://chanib5331-cloud.github.io/digital-library-spa/HTML/index.html (demo user: `michal@example.com` / `1234`)
 
-
+## Screenshots
 
 **Home**
 ![Home page](screenshots/home.png)
